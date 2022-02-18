@@ -1,0 +1,7 @@
+# Virtual Environment
+/venv/
+
+# Any pycache files
+/__pycache__/
+*.pyc
+*.pyo
