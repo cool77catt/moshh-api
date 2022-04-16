@@ -5,3 +5,9 @@
 /__pycache__/
 *.pyc
 *.pyo
+
+# Credentials
+/src/credentials
+
+# Mac-files
+*.DS_Store
