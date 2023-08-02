@@ -2,7 +2,9 @@
 
 See https://cloud.google.com/storage/docs/reference/libraries#client-libraries-install-python for more details.  Creedentials should not be stored 
 
-To obtain a new key/credential files, go the the quickstart service account (listed under service accounts) and download.  You might need to create a new key.
+To obtain a new key/credential files, go the the moshh api service account (listed under service accounts) and download.  You might need to create a new key.
+
+Set the path to the keyfile in the environment variable named "GOOGLE_APPLICATION_CREDENTIALS"
 
 
 # Creating the DOCKER image

@@ -1,13 +1,8 @@
 import os
 from flask import Flask
 from flask_restful import Resource, Api
+from views import UserView, EventView, SearchView, VideoView, ArtistView
 import settings
-from search import Search
-from video import Video
-
-# Set the GCP Environment Variable
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = \
-    settings.GCP_CREDENTIALS_PATH
 
 
 app = Flask(__name__)
@@ -20,9 +15,12 @@ class HelloWorld(Resource):
 
 
 api.add_resource(HelloWorld, '/')
-api.add_resource(Search, '/search')
-api.add_resource(Video, '/video')
+api.add_resource(UserView, '/user', '/user/<string:user_id>')
+api.add_resource(EventView, '/event')
+api.add_resource(SearchView, '/search')
+api.add_resource(VideoView, '/video')
+api.add_resource(ArtistView, '/artist', '/artist/<string:artist_id>')
 
 
-# if __name__ == '__main__':
-#     app.run(debug=True)
+if __name__ == '__main__':
+    app.run(debug=True)

@@ -1,6 +1,6 @@
 from flask_restful import Resource
 
-class Search(Resource):
+class SearchView(Resource):
     def get(self):
         return {
             'users': [],
